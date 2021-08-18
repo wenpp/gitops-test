@@ -10,7 +10,7 @@ spec:
  template:
   metadata:
    labels:
-    app: restfulapi
+    app: appspace
   spec:
    containers:
    - name: restfulapi
