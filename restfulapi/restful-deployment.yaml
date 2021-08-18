@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: restfulapi
+spec:
+ selector:
+  matchLabels:
+   app: appspace
+ replicas: 1
+ template:
+  metadata:
+   labels:
+    app: restfulapi
+  spec:
+   containers:
+   - name: restfulapi
+     image: registry.cn-chengdu.aliyuncs.com/infocloud-wenpp/restfulapi:v1
+     ports:
+     - containerPort: 8080
